@@ -1,0 +1,31 @@
+<div *ngFor="let application of applications" class="application mat-elevation-z24">
+    <mat-card>
+        <mat-card-content>
+            <div class="details">
+                First name: {{application.firstName}}
+            </div>
+            <div class="details">
+                Last name: {{application.lastName}}
+            </div>
+            <div class="details">
+                Email: {{application.email}}
+            </div>
+            <div class="details">
+                Address: {{application.address}}
+            </div>
+            <div class="details">
+                Education: {{application.education}}
+            </div>
+            <div class="details">
+                Education level: {{application.educationLevel}}
+            </div>
+            <div class="download">
+                <span></span>
+                <span>
+                    <a routerLink="./" (click)="downloadFile(true, application.cvLocation)">Download CV</a>
+                    <a routerLink="./" (click)="downloadFile(false, application.letterLocation)">Download Letter</a>
+                </span>
+            </div>
+        </mat-card-content>
+    </mat-card>
+</div>

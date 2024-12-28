@@ -1,0 +1,85 @@
+@import "../../../../styles/theme";
+
+.root {
+  display: flex;
+  flex-direction: row;
+}
+
+.search-forms {
+  position: absolute;
+  left: 2.5em;
+  width: 35%;
+
+  h1 {
+    text-align: center;
+  }
+
+  .mat-card {
+    padding: 2em;
+
+    .actions {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .center {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-top: 2em;
+    }
+  }
+}
+
+.search-results {
+  position: absolute;
+  right: 0;
+  width: 60%;
+
+  .search-result {
+    border: 1px solid $gray;
+    border-radius: 1em;
+    margin: 20px;
+
+    .mat-card {
+      padding: 1em;
+
+      .title {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        background-color: $gray;
+        opacity: 0.8;
+        padding: 0.5em;
+      }
+
+      .description {
+        padding: 0.5em;
+
+        .details {
+          margin-top: 0.5em;
+        }
+
+        .download {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          align-items: center;
+          margin-top: 0.5em;
+
+          a {
+            margin-right: 0.5em;
+          }
+        }
+      }
+    }
+  }
+}
+
+::ng-deep em {
+  font-weight: bold;
+}
